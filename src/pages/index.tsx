@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Icon } from "@/icons/geldicon";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SignUpForm = () => {
   const router = useRouter();
@@ -27,10 +28,7 @@ const SignUpForm = () => {
       alert("Error signing up. Please try again.");
     }
   };
-
-  const handleLoginButtton = () => {
-    router.push("/login");
-  };
+  
   return (
     <div className="container1">
       <div className="container2">
@@ -78,7 +76,7 @@ const SignUpForm = () => {
         </button>
         <div className="register-link">
           <p>
-            Already have account? <a onClick={handleLoginButtton}>log-in</a>
+            Already have account? <Link href='/login'>log-in</Link>
           </p>
         </div>
       </div>
