@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { Icon } from '@/icons/geldicon';
+import Link from 'next/link';
 
 const Login = () => {
   const router = useRouter();
@@ -43,7 +44,7 @@ const Login = () => {
         />
         <button className='btn' onClick={() => handleSubmit()}>Log in</button>
         <div className="register-link">
-          <p>Dont have account? <a href="/">Sign up</a></p>
+          <p>Dont have account? <Link href="/">Sign up</Link></p>
         </div>
       </div>
     </div>

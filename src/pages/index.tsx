@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Icon } from "@/icons/geldicon";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 const SignUpForm = () => {
-  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +26,7 @@ const SignUpForm = () => {
       alert("Error signing up. Please try again.");
     }
   };
-  
+
   return (
     <div className="container1">
       <div className="container2">
