@@ -1,74 +1,87 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { Icon } from '@/icons/geldicon';
+import React, { useState } from "react";
+import axios from "axios";
+import { Icon } from "@/icons/geldicon";
+import { useRouter } from "next/router";
 
 const SignUpForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const router = useRouter();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/signUp', {
-        userName: name,
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://income-tracker-service-23ay.onrender.com/signUp",
+        {
+          userName: name,
+          email: email,
+          password: password,
+        }
+      );
       console.log(response);
-      alert('Successfully signed up');
+      alert("Successfully signed up");
     } catch (error) {
-      console.error('Error signing up:', error);
-      alert('Error signing up. Please try again.');
+      console.error("Error signing up:", error);
+      alert("Error signing up. Please try again.");
     }
   };
+
+  const handleLoginButtton = () => {
+    router.push("/login");
+  };
   return (
-    <div className='container1'>
-      <div className='container2'>
-      <Icon />
-      <h1>Create Geld Account</h1>
-      <p>Sign up below to create your Wallet account</p>
-      <label htmlFor="name"></label>
-      <input
-        type="text"
-        id="name"
-        placeholder='Name'
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+    <div className="container1">
+      <div className="container2">
+        <Icon />
+        <h1>Create Geld Account</h1>
+        <p>Sign up below to create your Wallet account</p>
+        <label htmlFor="name"></label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
 
-      <label htmlFor="email"></label>
-      <input
-        type="email"
-        id="email"
-        placeholder='Email'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <label htmlFor="email"></label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <label htmlFor="password"></label>
-      <input
-        type="password"
-        id="password"
-        placeholder='Password'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <label htmlFor="password"></label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <label htmlFor="confirm-password"></label>
-      <input
-        type="password"
-        id="confirm-password"
-        placeholder='Re-password'
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-      />
+        <label htmlFor="confirm-password"></label>
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Re-password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
 
-      <button className='btn'  onClick={() => handleSubmit()}>Sign up</button>
-      <div className="register-link">
-        <p>Already have account? <a href="/log-in">Log in</a></p>
+        <button className="btn" onClick={() => handleSubmit()}>
+          Sign up
+        </button>
+        <div className="register-link">
+          <p>
+            Already have account? <a onClick={handleLoginButtton}>log-in</a>
+          </p>
         </div>
-        </div>
+      </div>
     </div>
   );
 };
