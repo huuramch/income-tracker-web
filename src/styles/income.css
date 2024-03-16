@@ -1,0 +1,60 @@
+.card-container{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.your-income{
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 400px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.your-income:hover{
+    transform: translateY(-5px) ;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.value{
+    font-size: 3rem;
+}
+.income-amount p{
+    color: #64748B;
+}
+.income{
+    width: 420px;
+}
+.income-amount{
+    padding-top: 25px;
+}
+.percent {
+    padding-top:30px;
+}
+.dot{
+    width: 9px;
+    height: 9px;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
+.random{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

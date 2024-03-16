@@ -7,65 +7,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  /* background-image: linear-gradient(to right, white 0%, white 50%,  #0166FF 50%,  #0166FF 100%); */
-  background-color: #0166FF;
+  /* height: 100vh; */
  }
- .container1 {
-  width: 50%;
-  height: 100vh;
-  /* margin: 0 auto; */
-  padding: 50px 0;
-  z-index: 1;
-  background-color: #fff;
+.body{
+  background-color:  #FAFAFA;
+  margin: auto 0
 }
-.container2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 200px;
-}
-
 h1{
   font-size: 3rem;
   margin-bottom: 30px;
   color: #333;
-}
- 
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #333;
-}
- 
- input[type="text"],
- input[type="email"],
- input[type="password"] {
-   width: 50%;
-   padding: 10px;
-   border: 1px solid #ccc;
-   border-radius: 10px;
-   font-size: 1.2rem;
-   margin-bottom: 20px;
-   box-sizing: border-box;
- }
- 
- .btn{
-  width: 50%;
-  padding: 10px;
-  background-color:  #0166FF;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
 }
 .background {
   background-size: cover;
@@ -82,19 +33,24 @@ input[type="submit"]:hover {
   height: 100%;
   background: linear-gradient(#0166FF);
 }
-.register-link{
-  font-size: 14.5px;
-  text-align: center;
-  margin: 20px 0 15px;
-}
+.bet{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding-top: 30px;
 
-.register-link p a{
-  color: #0166FF;
-  text-decoration: none;
-  font-weight: 600;
 }
-
-.register-link p a:hover{
-  text-decoration: underline;
+.graphic{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
 }
-
+  .all{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.list{
+  padding-top: 30px;
+}

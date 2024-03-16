@@ -1,0 +1,51 @@
+body{
+    background-color: white;
+}
+h1{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.money{
+     display: flex;
+    justify-content: center; 
+    padding-top: 15vh;
+}
+.label{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.Base{
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.btn2{
+    width: 22vw;
+    height: 5vh;
+    background-color:  #0166FF;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }

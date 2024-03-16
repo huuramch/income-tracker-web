@@ -20,6 +20,7 @@ const Login = () => {
   };
 
   return (
+    <div className='main'>
     <div className='container1'>
       <div className='container2'>
         <Icon/>
@@ -44,9 +45,10 @@ const Login = () => {
         />
         <button className='btn' onClick={() => handleSubmit()}>Log in</button>
         <div className="register-link">
-          <p>Dont have account? <Link href="/">Sign up</Link></p>
+          <p>Dont have account? <Link href="/signUp">Sign up</Link></p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

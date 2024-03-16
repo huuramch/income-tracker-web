@@ -28,6 +28,7 @@ const SignUpForm = () => {
   };
 
   return (
+    <div className="main">
     <div className="container1">
       <div className="container2">
         <Icon />
@@ -78,6 +79,7 @@ const SignUpForm = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
